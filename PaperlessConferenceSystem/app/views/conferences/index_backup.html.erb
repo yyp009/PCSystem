@@ -1,0 +1,46 @@
+
+
+
+<!--<center>
+<div align ="left"><%= image_tag("7.jpg")%></div><h1>重庆大学会议列表</h1>
+<h6>Chongqing University Conference List</h6>
+<%= form_tag conferences_path, :method => 'get' do %>   
+<p> 多条件查询：<br />
+    会议名称：
+    <%= text_field_tag :search, params[:searchtopic] %>   
+	时间：
+    <%= text_field_tag :search, params[:searchdatet] %>
+	地点：
+    <%= text_field_tag :search, params[:searchaddr] %>
+    <%= submit_tag "搜索", :name => nil %>   
+</p>   
+<% end %>
+
+<% @conferences.each do |conference| %>
+<table>
+  <tr class ="<%= cycle('list_line_odd','list_line_even')%>">
+  <td><%= image_tag("li.jpg")%><%=link_to "进入当前会议"%></td>
+
+    <td><%= image_tag("3.jpg",:class =>'list_image')%></td>
+	<td class="list_description">
+	<dl>
+	<dt><%= link_to conference.topic ,conference%></dt>
+	<dd>会议时间：<%= truncate(strip_tags(conference.addr),:length=>80)%>&nbsp&nbsp&nbsp会议地点：<%= truncate(strip_tags(conference.addr),:length=>80)%></dd>
+	</dl>
+	</td>
+
+    <td class="list_actions">
+	<%= link_to '查看', conference %><br />
+    <%= link_to '编辑', edit_conference_path(conference) %><br />
+    <%= link_to '删除', conference, method: :delete, data: { confirm: '您确定要这么做吗？' } %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '添加会议', new_conference_path %>
+
+<div align ="center"><%= will_paginate @conferences,:previous_label=> '上一页',:next_label=> '下一页' %> 
+每页显示<%=@conferences.per_page%></b>条数据,共有<b><%=@conferences.total_pages%></b>页,  共有<b><%=@conferences.total_entries%></b>条数据 当前第<%= @conferences.current_page%>页</div>-->

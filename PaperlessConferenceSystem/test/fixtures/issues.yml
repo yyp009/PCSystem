@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  issueid: 1
+  issuesubmitter: MyString
+  issuetitle: MyString
+  issuecontent: MyText
+  issuetype: MyString
+  issuetimecost: 1
+  issueisclassified: MyString
+  conference: 
+
+two:
+  issueid: 1
+  issuesubmitter: MyString
+  issuetitle: MyString
+  issuecontent: MyText
+  issuetype: MyString
+  issuetimecost: 1
+  issueisclassified: MyString
+  conference: 

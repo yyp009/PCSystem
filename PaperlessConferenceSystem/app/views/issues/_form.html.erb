@@ -1,0 +1,50 @@
+<%= nested_form_for([@conference,@issue],:html => { :multipart => true })   do |f| %>
+<table id="attendees">
+<tr>
+	<th><%= f.label"议题名称"%></th>
+	<td><%= f.text_field :issuetitle%></td>
+</tr>
+<tr>
+	<th><%= f.label"议题提出人"%></th>
+	<td><%= f.text_field :issuesubmitter%></td>
+</tr>
+<tr>
+	<th><%= f.label"议题编号"%></th>
+	<td><%= f.number_field :issueid%></td>
+</tr>
+<tr>
+	<th><%= f.label"议题时间花费"%></th>
+	<td><%= f.number_field :issuetimecost%></td>
+</tr>
+
+<tr>
+	<th><%= f.label"议题内容"%></th>
+	<td><%= f.text_area :issuecontent,rows:5%></td>
+</tr>
+<tr>
+	<th><%= f.label"公开程度"%></th>
+	<td><%= f.select :issueisclassified,["涉密","公开"]%></td>
+</tr>
+<tr>
+	<th><%= f.label"议题类型"%></th>
+	<td><%= f.select :issuetype,["审议决定","情况通报"],prompt:"请选择一种议题类型"%></td>
+</tr>
+
+
+<%= f.fields_for :attendees do |s| %>
+
+<%= render "attendees/attendee_fields", :f => s %>
+<% end %>
+<tr><td><%= link_to_add_fields "添加与会者", f, :attendees %></td></tr>
+
+<%= f.fields_for :attachments ,:html => { :multipart => true } do |a| %>
+
+<%= render "attachments/attachment_fields", :f => a %>
+<% end %>
+<tr><td><%= link_to_add_fields "添加议题附件", f, :attachments %></td></tr>
+	<tr>
+	<td><%= f.submit"提交"%></td>
+	</tr>
+</table>
+
+<%end%>

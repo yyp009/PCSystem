@@ -1,0 +1,16 @@
+<% issue.each do |issue|%>
+<td id="<%= dom_id issue%>">
+<fieldset>
+<legend><%= issue.issueid%></legend>
+<p>
+提出人：<%= issue.issuesubmitter%><br />
+<div class="p"><nobr>议题名称：<%= link_to issue.issuetitle,conference_issue_path(@conference,issue)%></nobr></div><!--罪魁祸首：后面的链接弄了我整整一天的时间啊！！！！！！！！！！-->
+议题类型：<%= issue.issuetype%><br/>
+<%= link_to '编辑', edit_conference_issue_path(@conference,issue) %> 
+<%= link_to '详情', conference_issue_path(@conference,issue) %> 
+<%= link_to '删除', [@conference,issue], method: :delete, data: { confirm: 'Are you sure?' },:remote=>true %>
+</p>
+</fieldset>
+</td>
+<%end%>
+

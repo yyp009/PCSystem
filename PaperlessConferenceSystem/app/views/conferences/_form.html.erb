@@ -1,0 +1,30 @@
+<%= form_for(@conference) do |f| %>
+  <% if @conference.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@conference.errors.count, "error") %> prohibited this conference from being saved:</h2>
+
+      <ul>
+      <% @conference.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table>
+  <tr>
+    <th><%= f.label '会议主题' %></th>
+    <td><%= f.text_field :topic %></td>
+  </tr>
+  <tr>
+    <th><%= f.label '会议时间' %></th>
+    <td><%= f.datetime_select :datet %></td>
+  </tr>
+  <tr>
+    <th><%= f.label '会议地点' %></th>
+    <td><%= f.text_area :addr,rows:5 %></td>
+  </tr>
+  <tr>
+    <td><%= f.submit '提交'%></td>
+  </tr>
+  </table>
+<% end %>

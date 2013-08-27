@@ -1,0 +1,5 @@
+<% issue.each do |issue|%>
+
+<li><%=image_tag("main_li_dot.jpg")%><div class="p"><nobr><%= link_to issue.issuetitle,conference_issue_path(@conference,issue)%></nobr></div><%=image_tag("main_li_point.jpg")%><%=image_tag("main_li_point.jpg")%></li><!--罪魁祸首：后面的链接弄了我整整一天的时间啊！！！！！！！！！！-->
+
+<%end%>

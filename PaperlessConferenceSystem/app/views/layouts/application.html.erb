@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="css/style.css" rel="stylesheet" type="text/css"  />
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+
+  <%= javascript_include_tag :defaults, "nested_form" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+
+<div class="header">
+<dl class="left">
+<dt><a href="http:\\localhost:3000">无纸会议系统</a></dt>
+<dd>Paperless Conference System</dd>
+
+</dl>
+<dl class="right">
+<dt>欢迎&nbsp;<%= current_user.username%></a>&nbsp;使用本系统 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<%= link_to "退出",destroy_user_session_path, :method => :delete %></dt>
+</dl>
+
+</div>
+<div class="lap"><img alt ="header_line" src="/assets/header_line.jpg" width="1366" height="1"  /></div>
+<div class="main"><%= yield %></div>
+<div class="footer">
+<div class="left"><img alt="footer_log" src="/assets/footer_log.jpg" width="30" height="28" alt="" />
+<dl>
+<dt>无纸会议系统</dt>
+<dd>Paperless Conference System</dd>
+</dl>
+</div>
+<div class="middle"><img alt="footer_lap" src="/assets/footer_lap.jpg" width="1" height="24" />
+<dl>
+<dt>重庆大学&nbsp;版权所有&nbsp;2012&nbsp;地址：重庆市沙坪坝区沙正街174号&nbsp;邮编：400044&nbsp;（渝ICP备05005762号）</dt>
+<dd>@&nbsp;COPYRIGHT CHONGQING UNIVERSITY ALL RIGHTS RESERVED</dd>
+</dl>
+</div>
+<div class="right"><img alt="footer_cqdx" src="/assets/footer_cqdx.jpg" width="117" height="54" /></div>
+</div>
+
+</body>
+</html>

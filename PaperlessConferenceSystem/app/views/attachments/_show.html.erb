@@ -1,0 +1,2 @@
+<p id="<%= dom_id f%>"><%=link_to f.file_file_name,:action=>"downSendData",data: { confirm: '确定要下载吗?'},:controller=>"download",:filename=>f.file_file_name %>
+<%= link_to "删除",[@conference,@issue,f], method: :delete, data: { confirm: '确定删除吗?' },:remote=>true%></p>

@@ -1,0 +1,130 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{margin:0; padding:0; font-size:12px; font-family:"宋体"; color:#606060 }/*; background:url(../images/main.jpg) repeat-x center top}*/
+h1,h2,ul,li,p,img,dl,dt,dd{margin:0; padding:0; border:0; list-style:none}
+.header{ width:1366px; height:66px;  background:url(../assets//header.jpg) repeat-x left top}
+.header dl.left{ width:200px; height:66; margin-left:108px; padding-top:14px; float:left}
+.header dl.left dt{font-size:16px; font-family:"微软雅黑"; color:#ffffff}
+.header dl.left dd{font-size:10px; font-family:"黑体"; color:#ffffff; line-height:20px}
+.header .left a:link,.header .left a:visited{ font-size:16px; font-family:"微软雅黑"; color:#ffffff;font-weight:bold; text-decoration:none}
+/*.header .left a:hover{ text-decoration:underline}*/
+.header dl.right{ width:300px; height:66; margin-left:650px; padding-top:20px; float:left}
+.header dl.right dt{font-size:13px; font-family:"微软雅黑"; color:#ffffff}
+.header dl.right dt a{font-size:12px; font-family:"宋体"; color:#ffffff}
+.header a:link,.header a:visited{ font-weight:bold; text-decoration:none}
+.header a:hover{ text-decoration:underline}
+.main{ width:1366px; height:634px;  background:url(../assets//main.jpg) repeat-x left top}
+.main .leftside{ width:330px; height:634px;float:left}
+.main .leftside img{ width:240px; height:185px; float:right}
+
+.main .rightside{ width:1036px; height:634px;float:left}
+.main .rightside .maintitle img{ width:718px; height:59px; margin-top:33px; float:left}
+.main .rightside .searchbar{ width:670px; height:97px; margin-left:48px; margin-top:16px}
+.main .rightside .searchbar dl dt{ float:left; margin-top:0; height:24px; width:670px}
+.main .rightside .searchbar dl dd span.left{ float:left; width:9px; height:36px}
+.main .rightside .searchbar dl dd span.right{ float:left; width:9px; height:36px}
+.main .rightside .searchbar dl dd span.search input{ float:left; width:43px; height:36px;background:url(../assets//main_searchbar_icon.jpg) no-repeat;border:none}
+.main .rightside .searchbar dl dd ul{ width:609px; height:36px; background:url(../assets//main_searchbar_bg.jpg) repeat-x ; float:left}
+.main .rightside .searchbar dl dd ul li{width:101px; height:36px; line-height:36px; text-align:center; background:url(../assets//main_searchbar_lap.jpg) no-repeat right center; float:left; font-size:14px; font-family:"微软雅黑"; color:#fff; font-weight:bold}
+.main .rightside .searchbar dl dd ul li.nobg{ background:none}
+.main .rightside .searchbar dl dd ul li input{width:93px; height:30px; float:left; background:url(../assets//main_searchbar_bg.jpg) repeat-x; border:hidden}
+.main .rightside .shining img{ width:670px; height:37px; margin-left:48px}
+.main .rightside .enter img{ width:588px; height:90px; margin-left:78px}
+.main .rightside .conference{ width:588px; height:286px; overflow:auto; margin-left:78px}
+.main .rightside .conference .conitem{ width:568px; height:79px}
+.main .rightside .conference .conitem img{ width:91px; height:53px; margin-left:4px; float:left}
+.main .rightside .conference .conitem dl{ width:460px; height:53px; padding-left:10px; float:left; line-height:25px}
+.main .rightside .conference .conitem dl dt { font-size:14px; font-family:"微软雅黑"; color:#FF9}
+.main .rightside .conference .conitem dl dt a:link,.main .rightside .conference .conitem dl dt a:visited{ color:#FF9;font-weight:bold;text-decoration:none}
+.main .rightside .conference .conitem dl dt a:hover{ color:#FF9;text-decoration:underline}
+.main .rightside .conference .conitem dl dd{ font-size:14px; font-family:"微软雅黑"; color:#FFF}
+.main .rightside .add {margin-left:78px;width:588px;height:50px;padding-top:20px;padding-right:100px;float:right;font-size:14px;font-family:"微软雅黑";font-weight:bold}
+.main .rightside .add a:link,.main .rightside .add a:visited{color:#ff9;text-decoration:none}
+.main .rightside .add a:hover{text-decoration:underline}
+
+.footer{width:1366px; height:66px;  background:url(../assets//footer.jpg) repeat-x left top}
+.footer .left img{ margin-left:160px; margin-top:20px; float:left}
+.footer .left dl{ width:200px; height:66; margin-left:5px;padding-top:20px; float:left}
+.footer .left dl dt{font-size:11px; font-family:"微软雅黑"; color:#69C}
+.footer .left dl dd{font-size:9px; font-family:"黑体"; color:#69C; line-height:10px}
+.footer .middle img{margin-left:10px; margin-top:20px; float:left}
+.footer .middle dl{ width:600px; height:66; margin-left:40px;padding-top:20px; float:left}
+.footer .middle dl dt{font-size:11px; font-family:"微软雅黑"; color:#69C}
+.footer .middle dl dd{font-size:9px; font-family:"黑体"; color:#69C; line-height:10px}
+.footer .right img{margin-left:70px; margin-top:5px; float:left}
+
+/*Conference Show*/
+.mainshow .upside {width:1366px;height:185px}
+.mainshow .upside img{width:240px;height:185px;float:left;margin-left:89px;margin-top:1px}
+.mainshow .upside h1{font-size:35px;font-weight:bold;font-family:"微软雅黑";color:#fff;padding-top:75px}
+.mainshow .downside{width:900px;height:350px;margin-left:130px}
+.mainshow .downside .addrdate{width:900px;height:50px}
+.mainshow .downside .addrdate .left{font-size:14px;font-family:"微软雅黑";color:#ff9;float:left}
+.mainshow .downside .addrdate .right{font-size:14px;font-family:"微软雅黑";color:#ff9;float:right}
+.mainshow .downside .issueitem{width:900px;height:290px;margin-top:10px;margin-left:100px;float:left;overflow:auto}
+.mainshow .downside .issueitem table{width:700px}
+.mainshow .downside .issueitem .p{overflow:hidden;text-overflow:ellipsis}
+.mainshow .downside .issueitem table tr td{width:200px;height:100px;margin-left:10px}
+.mainshow .downside .issueitem table tr td fieldset{width:200px;height:100px;margin-left:10px}
+.mainshow .linkside{width:800px;height:50px;float:left;margin-left:630px;margin-top:20px}
+.mainshow .linkside h2 a:link,.mainshow .linkside h2 a:visited{font-size:18px;font-family:"微软雅黑";color:#ff9;text-decoration:none}
+.mainshow .linkside h2 a:hover{text-decoration:underline}
+.mainshow .linkside h5{padding-left:7px}
+.mainshow .linkside h5 a:link,.mainshow .linkside h5 a:visited{font-size:10px;font-family:"微软雅黑";color:#ff9;text-decoration:none}
+.mainshow .linkside h5 a:hover{text-decoration:underline}
+
+/*Devise*/
+.login{width:1366px; height:768px;  background:url(../assets//login_bg.jpg) no-repeat left top}
+.login .logpan{ width:372px;height:225px;margin-left:505px;padding-top:295px}
+.login .logpan .UN input{width:191px;height:31px;margin-top:48px;margin-left:139px;float:left; background:url(../assets//input_bg.jpg) repeat-x; border:hidden}
+.login .logpan .PWD input{width:191px;height:31px;margin-top:33px;margin-left:139px;float:left; background:url(../assets//input_bg.jpg) repeat-x; border:hidden}
+.login .logpan .rem input{margin-left:40px;float:left;margin-top:26px}
+.login .logpan .rem label{margin-left:5px;float:left;margin-top:26px}
+.login .logpan .register a{margin-left:75px;float:left;margin-top:26px;font-size:12px;font-family:"微软雅黑"}
+.login .logpan .loginbt input{text:none;width:50px;height:24px;margin-left:75px;float:left;margin-top:29px;background:url(../assets//login_button.jpg) no-repeat; border:hidden}
+
+/*Issues show*/
+.issueshow .upside {width:1366px;height:185px}
+.issueshow .upside img{width:240px;height:185px;float:left;margin-left:89px;margin-top:1px}
+.issueshow .upside h1{font-size:35px;font-weight:bold;font-family:"微软雅黑";color:#fff;padding-top:75px}
+.issueshow .downside{width:900px;height:400px;margin-left:250px;padding-top:5px;margin-top:1px;overflow:auto}
+.issueshow .downside .leftsideouter1{width:218px;height:292px;float:left;padding:1px 1px 1px 1px;background:url(../assets//issuelist_border_out_bg.jpg) repeat}
+.issueshow .downside .leftsideouter2{width:216px;height:290px;float:left;padding:1px 1px 1px 1px;background:url(../assets//issuelist_border_in_bg.jpg) repeat}
+.issueshow .downside .leftsideouter3{width:196px;height:270px;float:left;padding:10px 10px 10px 10px;background:url(../assets//issuelist_border_bg.jpg) repeat}
+.issueshow .downside .leftsideinner{width:196px;height:270px;float:left;background:url(../assets//issueshow_list_bg.jpg) repeat;overflow:auto}
+.issueshow .downside .leftsideinner img{margin-top:10px;margin-left:28px}
+.issueshow .downside .leftsideinner ul{width:180px;margin-top:5px;margin-left:8px}
+.issueshow .downside .leftsideinner ul li{width:180px;height:30px;background:url(../assets//issuelist_line_bg.jpg) repeat-x top left}
+.issueshow .downside .leftsideinner ul li img{margin-left:5px;margin-top:14px;float:left}
+.issueshow .downside .leftsideinner ul li .p{width:140px;font-size:14px;font-family:"微软雅黑";color:#ff9;float:left;margin-top:6px;margin-left:5px;overflow:hidden;text-overflow:ellipsis}
+.issueshow .downside .leftsideinner ul li .p a:link,.issueshow .downside .leftsideinner ul li .p a:visited{font-size:14px;font-family:"微软雅黑";color:#ff9;text-decoration:none}
+.issueshow .downside .leftsideinner ul li .p a:hover{text-decoration:underline}
+
+.issueshow .downside .rightsideout{margin-left:10px;width:668px;height:394px;float:left;padding:1px 1px 1px 1px;background:url(../assets//issuedet_border_out.jpg) repeat}
+.issueshow .downside .rightside{width:652px;height:378px;float:left;border:8px #002 solid;background:#fff}
+.issueshow .downside .rightsidein{width:636px;height:362px;float:left;border:8px #F5F1F1 solid;background:#FDFDFA}
+.issueshow .downside .rightsidein .header{width:636px;height:30px;float:left;background:#F5F1F1;margin-top:10px}
+.issueshow .downside .rightsidein .header h4{float:left;margin-left:20px;margin-top:5px;font-size:18px;font-family:"微软雅黑";color:#0F4183}
+.issueshow .downside .rightsidein .header h5{float:left;margin-top:8px;font-size:12px;font-family:"微软雅黑";color:#87857D}
+.issueshow .downside .rightsidein .header h6{float:right;margin-right:15px;margin-top:8px;font-size:12px;font-family:"微软雅黑";color:#87857D}
+.rightsidein .issuetitle{width:636px;height:67px;float:left}
+.rightsidein .issuetitle img{margin-left:50px;float:left}
+.rightsidein .issuetitle dl dt{font-size:16px;font-family:"黑体";font-weight:bold;float:left;margin-top:10px}
+.rightsidein .issuetitle dl dd{font-size:16px;font-family:"微软雅黑";float:left;margin-top:25px}
+.rightsidein .line{width:594px;height:16px;margin-left:20px;float:left;background:url(../assets//hline_bg.jpg) repeat-x}
+.rightsidein table{width:594px;height:230px;margin-left:20px;float:left top;border-bottom:1px #E8E5D9 solid;overflow:auto}
+.rightsidein table th{width:15%;color:#87857D}
+.rightsidein table .attendee{height:10%}
+.rightsidein table .content {height:55%;background:#F5F1F1}
+.rightsidein table .content .over{width:500px;height:130px;overflow:auto}
+
+
+.issueshow .linkside{width:800px;height:20px;float:left;margin-left:630px;margin-top:0px}
+.issueshow .linkside h2 a:link,.mainshow .linkside h2 a:visited{font-size:18px;font-family:"微软雅黑";color:#ff9;text-decoration:none}
+.issueshow .linkside h2 a:hover{text-decoration:underline}
+.issueshow .linkside h5{padding-left:7px}
+.issueshow .linkside h5 a:link,.mainshow .linkside h5 a:visited{font-size:10px;font-family:"微软雅黑";color:#ff9;text-decoration:none}
+.issueshow .linkside h5 a:hover{text-decoration:underline}
+td{text-align:left}
+th{text-align:right}
+

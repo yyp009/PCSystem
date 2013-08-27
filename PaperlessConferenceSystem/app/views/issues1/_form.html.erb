@@ -1,0 +1,35 @@
+<%= form_for([@conference,@conference.issues.build]) do |f| %>
+<table>
+<tr>
+	<td><%= f.label"议题名称"%></td>
+	<th><%= f.text_field :issuetitle%></th>
+</tr>
+<tr>
+	<td><%= f.label"议题提出人"%></td>
+	<th><%= f.text_field :issuesubmitter%></th>
+</tr>
+<tr>
+	<td><%= f.label"议题编号"%></td>
+	<th><%= f.text_field :issueid%></th>
+</tr>
+<tr>
+	<td><%= f.label"参与者"%></td>
+	<th><%= f.text_field :issueattendee%></th>
+</tr>
+<tr>
+	<td><%= f.label"议题内容"%></td>
+	<th><%= f.text_area :issuecontent%></th>
+</tr>
+<tr>
+	<td><%= f.label"议题材料"%></td>
+	<th><%= f.text_field :issuematerial%></th>
+</tr>
+<tr>
+	<td><%= f.label"议题类型"%></td>
+	<th><%= f.text_field :issuetype%></th>
+</tr>
+	<div class="actions">
+	<%= f.submit"提交"%>
+	</div>
+</table>
+<%end%>

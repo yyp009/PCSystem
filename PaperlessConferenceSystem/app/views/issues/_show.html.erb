@@ -1,0 +1,39 @@
+<div class="rightsideout">
+<div class="rightside">
+<div class="rightsidein">
+<div class="header">
+<h4>议题序号</h4><h5>&nbsp;&nbsp;|&nbsp;&nbsp;<%= @issue.issueid %></h5><h6><%= @issue.issuesubmitter %>&nbsp;&nbsp;【<%= @issue.issuetype %>】&nbsp;&nbsp;【<%= @issue.issueisclassified %>】&nbsp;&nbsp;【<%= @issue.issuetimecost %>分钟】</h6>
+</div>
+
+<div class="issuetitle">
+<%= image_tag("issuedet_log.png")%>
+<dl>
+<dt>议题名称</dt><br />
+<dd><%= @issue.issuetitle %></dd>
+</dl>
+</div>
+
+<div class="line">
+</div>
+
+<table>
+<tr class="attendee">
+  <th>列席单位</th>
+  <td><%= @issue.attendees.map{|t|t.name}.join(",") %></td>
+</tr>
+<tr class="content">
+  <th>审议决定<br />具体事项</th>
+  <td><div class="over"><%= @issue.issuecontent %></div></td>
+</tr>
+<tr class="attachment">
+  <th>议题材料</th>
+<td><% @attachments.each do |k|%>
+<%= render"attachments/show",:f=>k%>
+<%end%></td>
+</tr>
+</table>
+
+</div>
+</div>
+
+</div>

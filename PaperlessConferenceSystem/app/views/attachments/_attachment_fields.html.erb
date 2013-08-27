@@ -1,0 +1,9 @@
+<tr class="fields">
+<th><%= f.label "议题附件" %></th>
+<td><%= f.file_field :file%></td>
+<% unless f.object.nil?||f.object.new_record?%>
+<%= f.hidden_field :_destroy %>
+<td><%= link_to_function "删除", "remove_fields(this)" %></td>
+
+<%end%>
+</tr>

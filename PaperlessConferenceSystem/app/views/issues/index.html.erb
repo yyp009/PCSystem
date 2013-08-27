@@ -1,0 +1,36 @@
+<h1>Listing issues</h1>
+
+<table>
+  <tr>
+    <th>Issueid</th>
+    <th>Issuesubmitter</th>
+    <th>Issuetitle</th>
+    <th>Issueattendee</th>
+    <th>Issuecontent</th>
+    <th>Issuematerial</th>
+    <th>Issuetype</th>
+    <th>Conference</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @issues.each do |issue| %>
+  <tr>
+    <td><%= issue.issueid %></td>
+    <td><%= issue.issuesubmitter %></td>
+    <td><%= issue.issuetitle %></td>
+    <td><%= issue.issuetimecost %></td>
+    <td><%= issue.issuecontent %></td>
+    <td><%= issue.issueisclassified %></td>
+    <td><%= issue.issuetype %></td>
+    <td><%= issue.conference %></td>
+    <td><%= link_to 'Show', conference_issue_url %></td>
+    <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
+    <td><%= link_to 'Destroy', [@conference,issue], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

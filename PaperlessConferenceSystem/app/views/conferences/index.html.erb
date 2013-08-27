@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无纸化会议列表</title>
+<link href="css/style.css" rel="stylesheet" type="text/css"  />
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="main">
+<div class="leftside"><img alt="main_log" src="/assets/main_log.jpg" width="240" height="185" /></div>
+<div class="rightside">
+<div class="maintitle"><img alt="main_title" src="/assets/main_title.jpg" width="718" height="59" /></div>
+<div class="searchbar">
+<dl>
+<dt><img alt="main_duotiaojian" src="/assets/main_duotiaojian.jpg" width="78" height="15" /></dt>
+<dd> <%=form_tag conferences_path, :method => 'get' do%>
+<span class="left"><img alt="main_searchbar_left" src="/assets/main_searchbar_left.jpg" width="9" height="36" /></span>
+<ul>
+<li>会议名称：</li>
+<li><input id="searchtopic" name="searchtopic" type="text" /></li>
+<li>会议时间：</li>
+<li><input id="searchdatet" name="searchdatet" type="text" /></li>
+<li>会议地点：</li>
+<li class="nobg"><input id="searchaddr" name="searchaddr" type="text" /></li>
+</ul>
+<span class="right"><img alt="main_searchbar_right" src="/assets/main_searchbar_right.jpg" width="9" height="36" /></span>
+<span class="search"><input name="commit" type="submit" value=" " /></span><%end%>
+</dd>
+</dl>
+</div>
+<div class="shining"><img alt="main_shining" src="/assets/main_shining.jpg" width="670" height="37" /></div>
+<div class="enter"><img alt="main_enterinto" src="/assets/main_enterinto.jpg" width="588" height="90" /></div>
+<div class="conference">
+
+<% @conferences.each do |conference| %>
+<div class="conitem"><img alt="main_conlog" src="/assets/main_conlog.jpg" width="91" height="53" />
+<dl>
+<dt><%= link_to conference.topic ,conference%></dt>
+<dd>会议时间：<%= conference.datet %> 会议地点：<%= conference.addr %></dd>
+</dl>
+</div>
+<%end%>
+
+</div>
+
+<div class="add">
+<%= link_to '添加会议', new_conference_path%>
+</div>
+
+</div>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,14 @@
+<% @issues.each do |issue| %>
+<td>
+<div class="depot_form">
+<fieldset>
+<legend> <%= issue.issueid%></legend>
+<p>
+提出人：<%= issue.issuesubmitter%><br />
+议题名称：<%= link_to issue.issuetitle,conference_issue_path(@conference,@issue)%><br />
+议题类型：<%= issue.issuetype%>
+</p>
+</fieldset>
+</div>
+</td>
+<%end%>

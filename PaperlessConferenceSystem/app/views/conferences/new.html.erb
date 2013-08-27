@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新建会议</title>
+<link href="css/style.css" rel="stylesheet" type="text/css"  />
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p id="notice"><%= notice %></p>
+<div class="mainshow">
+<div class="upside"><img alt="main_log" src="/assets/main_log.jpg" width="240" height="185" /><h1>添加会议</h2></div>
+
+
+<div class="downside">
+<%= render 'form' %>
+</div>
+
+</div>
+
+</body>
+</html>
+
+
+<%= link_to '返回上一级', conferences_path %>
